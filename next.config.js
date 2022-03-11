@@ -1,6 +1,7 @@
 const useTranslate = require("next-translate");
+const withPWA = require("next-pwa");
 
-module.exports = useTranslate({
+module.exports = useTranslate(withPWA({
     trailingSlash: true,
     swcMinify: true,
     webpack5: true,
@@ -9,5 +10,11 @@ module.exports = useTranslate({
     i18n: {
         locales: ["de", "en"],
         defaultLocale: "de"
-    }
-})
+    },
+    pwa: {
+        dest: "public",
+        buildExcludes: [/middleware-manifest\.json$/],
+        register: true,
+        dynamicStartUrl: true,
+    },
+}))
