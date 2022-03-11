@@ -21,7 +21,9 @@ export const getStaticProps = (context) => {
 
 export const getStaticPaths = () => {
     return {
-        paths: [],
+        paths: [
+            {params: {speakingUrl: ["/"]}}
+        ],
         fallback: true
     }
 }
