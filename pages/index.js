@@ -10,6 +10,10 @@ export default function Home() {
 }
 
 export const getStaticProps = (context) => {
+    if(context.locale === "en") {
+        throw new Error("404");
+    }
+
     return {
         props: {
 
