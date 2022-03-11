@@ -4,7 +4,7 @@ export default function Generic({speakingUrl}) {
     const {t} = useTranslation("common");
     return (
         <div className="container">
-            {t("TEST")} :: ${speakingUrl}
+            {t("TEST")} :: {speakingUrl}
         </div>
     );
 }
@@ -24,6 +24,6 @@ export const getStaticPaths = () => {
         paths: [
             {params: {speakingUrl: ["/"]}}
         ],
-        fallback: true
+        fallback: "blocking",
     }
 }
