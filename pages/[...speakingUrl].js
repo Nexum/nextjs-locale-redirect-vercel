@@ -18,3 +18,10 @@ export const getStaticProps = (context) => {
         }
     }
 }
+
+export const getStaticPaths = () => {
+    return {
+        paths: [],
+        fallback: true
+    }
+}
