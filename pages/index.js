@@ -1,10 +1,10 @@
-import {useRouter} from "next/router";
+import useTranslation from "next-translate/useTranslation";
 
 export default function Home() {
-    const {locale} = useRouter();
+    const {t} = useTranslation("common");
     return (
         <div className="container">
-            {locale}
+            {t("TEST")}
         </div>
     );
 }
