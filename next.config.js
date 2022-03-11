@@ -2,6 +2,8 @@ const useTranslate = require("next-translate");
 const withPWA = require("next-pwa");
 
 module.exports = useTranslate(withPWA({
+    serverRuntimeConfig:  {},
+    eslint: {ignoreDuringBuilds: true},
     trailingSlash: true,
     swcMinify: true,
     webpack5: true,
